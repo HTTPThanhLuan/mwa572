@@ -3,7 +3,7 @@ const joi= require('joi');
 const express= require('express');
 //require('dotenv').config();
 const sgmail=require('@sendgrid/mail');
-sgmail.setApiKey('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');
+sgmail.setApiKey(process.env.MySendGridKey);
 const app = express();
 
 
