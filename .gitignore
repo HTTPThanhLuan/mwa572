@@ -689,3 +689,4 @@ SocketIO/node_modules/.bin/mime.ps1
 SocketIO/node_modules/.bin/mime.cmd
 SocketIO/node_modules/.bin/mime
 SocketIO/index.js
+.env

@@ -1,14 +1,18 @@
 const joi= require('joi');
-const express= require('express');
-const sgmail=require('@sendgrid/mail');
 
-sgmail.setApiKey(process.env.MY_KeySendGrid);
+const express= require('express');
+//require('dotenv').config();
+const sgmail=require('@sendgrid/mail');
+sgmail.setApiKey('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');
 const app = express();
+
+
+
 
 
 app.use(express.json());
 
-const obj={
+const obj={  
     subject:"subject",
     heading:"heading",
     description:"desciption", //html;
@@ -54,7 +58,7 @@ function createMessage(message) {
             subject: message.subject
          }
       ],
-      from: { email: 'no-reply@social.com', name: 'SocialNetworking' },    
+      from: { email: 'thaiduongnguyen@gmail.com', name: 'SocialNetworking' },    
       content: [{ type: "text/html", value: createTemplate(message) }]
    };
 }
@@ -73,3 +77,4 @@ function createTemplate(obj) {
 </html>`;
 
 }
+ 
