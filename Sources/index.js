@@ -1,14 +1,13 @@
-const joi= require('joi');
+//this file is used to send mail with sendgrid
 
+const joi= require('joi');
+require('dotenv').config();
 const express= require('express');
 //require('dotenv').config();
 const sgmail=require('@sendgrid/mail');
 sgmail.setApiKey(process.env.MySendGridKey);
 const app = express();
-
-
-
-
+console.log(process.env.MySendGridKey);
 
 app.use(express.json());
 
